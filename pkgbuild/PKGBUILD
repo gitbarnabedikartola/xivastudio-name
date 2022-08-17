@@ -1,0 +1,15 @@
+pkgname=xivastudio-name
+pkgver=1.00
+pkgrel=1
+arch=('any')
+license=('GPL')
+conflicts=('biglinux-name')
+url="https://github.com/xivastudio/xivastudio-name"
+pkgdesc="Icons and changes for name"
+source=("git+https://github.com/xivastudio/xivastudio-name.git")
+md5sums=(SKIP)
+install=post.install
+
+package() {
+    cp -r "${srcdir}/xivastudio-name/usr/" "${pkgdir}/"
+}
