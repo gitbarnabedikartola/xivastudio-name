@@ -1,6 +1,6 @@
 pkgname=xivastudio-name
-pkgver=1.00
-pkgrel=1
+pkgver=2022.08.20
+pkgrel=$(date +%H%M)
 arch=('any')
 license=('GPL')
 conflicts=('biglinux-name')
@@ -9,6 +9,10 @@ pkgdesc="Icons and changes for name"
 source=("git+https://github.com/xivastudio/xivastudio-name.git")
 md5sums=(SKIP)
 install=post.install
+
+pkgver() {
+    printf "%s" "$(date +%y.%m.%d)"
+}
 
 package() {
     cp -r "${srcdir}/xivastudio-name/usr/" "${pkgdir}/"
