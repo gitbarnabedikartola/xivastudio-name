@@ -4,9 +4,9 @@ pkgrel=$(date +%H%M)
 arch=('any')
 license=('GPL')
 conflicts=('biglinux-name')
-url="https://github.com/xivastudio/xivastudio-name"
+url="https://github.com/xivastudio/$pkgname"
 pkgdesc="Icons and changes for name"
-source=("git+https://github.com/xivastudio/xivastudio-name.git")
+source=("git+https://github.com/xivastudio/$pkgname.git")
 md5sums=(SKIP)
 install=post.install
 
@@ -19,5 +19,5 @@ install=post.install
 # }
 
 package() {
-    cp -r "${srcdir}/xivastudio-name/usr/" "${pkgdir}/"
+    cp -r "${srcdir}/$pkgname/usr/" "${pkgdir}/"
 }
