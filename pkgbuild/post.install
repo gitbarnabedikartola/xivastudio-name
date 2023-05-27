@@ -19,9 +19,9 @@ bash /usr/share/libalpm/scripts/xivastudio-name
 #}
 
 ## arg 2:  the old package version
-#post_upgrade() {
-	# do something here
-#}
+post_upgrade() {
+	post_install
+}
 
 ## arg 1:  the old package version
 #pre_remove() {
